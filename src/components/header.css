@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.container {
+  width: 100%;
+  height: 10em;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  padding: 15px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+}
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.692);
+  --animation-color: #37ff8b;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.actual-text {
+  position: absolute;
+}
+
+.hover-text {
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+.container form {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.container form input {
+  width: 80%;
+  border: 1px solid white;
+  font-size: 1.2em;
+  padding: 0px 5px;
+  height: 30%;
+  border-radius: 5px;
+  background-color: #ffffff00;
+  outline: none;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: 0.5s ease;
+  &:focus {
+    border: 2px solid #37ff8b;
+    background-color: #ffffff6e;
+  }
+  &::placeholder{
+    color: #ffffff;
+  }
+}
+
+.container form button {
+  height: 100%;
+  width: 15%;
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container form button svg {
+  width: 75%;
+  height: 40%;
+  padding: 0px 5px;
+  backdrop-filter: drop-shadow(10px 10px 10px black);
+  border: 0px solid #37ff8b;
+  border-radius: 8px;
+  &:hover {
+    border: 1.5px solid #37ff8b;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.438);
+    transition: 0.5s ease;
+  }
+}
+
+body {
+  overflow-x: scroll;
+}
+
+.container {
+  animation: bgAlternate 1ms ease-in;
+  animation-timeline: scroll();
+}
+
+@keyframes bgAlternate {
+  from{
+   background-color: transparent;
+  }
+  to{
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.644);
+  }
+}
