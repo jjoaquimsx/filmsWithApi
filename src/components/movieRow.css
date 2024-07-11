@@ -194,7 +194,10 @@ h2 {
     display: none;
   }
   .featured-name{
-    font-size: 1em;
+    font-size: 0.6em;
+  }
+  .featured{
+    backgroun-position: right center;
   }
 }
 
