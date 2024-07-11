@@ -128,7 +128,6 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@media
 
 .feature--name {
   font-size: 3em;
@@ -194,7 +193,7 @@ h2 {
     display: none;
   }
   .featured-name{
-    font-size: 0.6em;
+    font-size: 0.4em;
   }
   .featured{
     backgroun-position: right center;
