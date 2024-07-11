@@ -11,6 +11,7 @@
   align-items: center;
   color: #fff;
   position: fixed;
+  z-index:999;
 }
 
 /* === removing default button style ===*/
