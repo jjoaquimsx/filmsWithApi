@@ -11,7 +11,13 @@
   align-items: center;
   color: #fff;
   position: fixed;
-  z-index:999;
+  z-index:9999;
+}
+
+@media screen and (max-width:768px){
+  .container{
+    z-index:9999;
+  }
 }
 
 /* === removing default button style ===*/
